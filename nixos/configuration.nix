@@ -158,6 +158,20 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [];
 
+  # Shell aliases
+  environment.shellAliases = {
+    cdnix = "cd ~/Developer/nix/nix-config";
+    code-nix = "code ~/Developer/nix/nix-config/";
+    code-nixc = "code ~/Developer/nix/nix-config/nixos/configuration.nix";
+    code-home = "code /home/lucy/Developer/nix/nix-config/home-manager/home.nix";
+    switch-nix = "sudo nixos-rebuild switch --flake .#nixos";
+    switch-home = "home-manager switch --flake .#lucy@nixos";
+    dc = "docker compose";
+    pnpi = "pnpm install";
+    pnpr = "pnpm run";
+    pnpx = "pnpm exec";
+  };
+
   # Setup Docker
   virtualisation.docker = {
     enable = true;

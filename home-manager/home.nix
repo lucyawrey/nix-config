@@ -48,7 +48,7 @@
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
     sl
-    nodejs
+    nodejs_20
     firefox
     chromium
     wget
@@ -64,6 +64,8 @@
     userName  = "Lucy Awrey";
     userEmail = "35198881+lucyawrey@users.noreply.github.com";
     aliases = {
+      s = "status";
+      com = "commit -a -m";
       undo = "reset HEAD~1 --mixed";
       amend = "commit -a --amend";
     };
@@ -75,20 +77,6 @@
         rebase = false;
       };
     };
-  };
-
-  # Shell aliases
-  programs.bash.shellAliases = {
-    cdnix = "cd ~/Developer/nix/nix-config";
-    code-nix = "code ~/Developer/nix/nix-config/";
-    code-nixc = "code ~/Developer/nix/nix-config/nixos/configuration.nix";
-    code-home = "code /home/lucy/Developer/nix/nix-config/home-manager/home.nix";
-    switch-nix = "sudo nixos-rebuild switch --flake .#nixos";
-    switch-home = "home-manager switch --flake .#lucy@nixos";
-    dc = "docker compose";
-    pnpi = "pnpm install";
-    pnpr = "pnpm run";
-    pnpx = "pnpm exec";
   };
 
   # Nicely reload system units when changing configs
