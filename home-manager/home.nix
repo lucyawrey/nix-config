@@ -47,9 +47,13 @@
 
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
+    discord
+    blender
     sl
     nodejs_20
     nodejs_20.pkgs.pnpm
+    gcc
+    rustup
     firefox
     google-chrome
     wget
