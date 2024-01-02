@@ -58,8 +58,21 @@
   programs.home-manager.enable = true;
   programs.git = {
     enable = true;
+    package = pkgs.gitFull;
     userName  = "Lucy Awrey";
     userEmail = "35198881+lucyawrey@users.noreply.github.com";
+    aliases = {
+      undo = "reset HEAD~1 --mixed";
+      amend = "commit -a --amend";
+    };
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+      pull = {
+        rebase = false;
+      };
+    };
   };
 
   # Nicely reload system units when changing configs
