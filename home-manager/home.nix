@@ -49,6 +49,7 @@
   home.packages = with pkgs; [
     sl
     nodejs_20
+    nodejs_20.pkgs.pnpm
     firefox
     chromium
     wget

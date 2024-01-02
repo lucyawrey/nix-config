@@ -163,6 +163,7 @@
     cdd = "cd ~/Developer";
     cdnix = "cd ~/Developer/nix/nix-config";
     code-nix = "code ~/Developer/nix/nix-config/";
+    code-lantern = "code ~/Developer/node/lantern";
     code-nixc = "code ~/Developer/nix/nix-config/nixos/configuration.nix";
     code-home = "code /home/lucy/Developer/nix/nix-config/home-manager/home.nix";
     switch-nix = "sudo nixos-rebuild switch --flake .#nixos";
