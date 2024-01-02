@@ -18,7 +18,7 @@
     # inputs.hardware.nixosModules.common-ssd
 
     # You can also split up your configuration and import pieces of it here:
-    # ./users.nix
+    ./aliases.nix
     # Import home-manager's NixOS module
     inputs.home-manager.nixosModules.home-manager
     # Import your generated (nixos-generate-config) hardware configuration
@@ -167,24 +167,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [];
-
-  # Shell aliases
-  environment.shellAliases = {
-    cdd = "cd ~/Developer";
-    cdnix = "cd ~/Developer/nix/nix-config";
-    code-nix = "code ~/Developer/nix/nix-config/";
-    code-lantern = "code ~/Developer/node/lantern";
-    code-nixc = "code ~/Developer/nix/nix-config/nixos/configuration.nix";
-    code-home = "code /home/lucy/Developer/nix/nix-config/home-manager/home.nix";
-    clone-nix = "git clone https://github.com/lucyawrey/nix-config ~/Developer/nix/nix-config";
-    rebuild = "sudo nixos-rebuild switch --flake ~/Developer/nix/nix-config#nixos";
-    rebuild-dir = "sudo nixos-rebuild switch --flake .#nixos";
-    rebuild-remote = "sudo nixos-rebuild switch --flake https://github.com/lucyawrey/nix-config#nixos";
-    dc = "docker compose";
-    pnpi = "pnpm install";
-    pnpr = "pnpm run";
-    pnpx = "pnpm exec";
-  };
 
   # Setup Docker
   virtualisation.docker = {

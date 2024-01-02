@@ -63,6 +63,7 @@
     godot_4
     signal-desktop
     signal-cli
+    barrier
   ];
 
   programs.neovim.enable = true;
