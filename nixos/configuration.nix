@@ -160,6 +160,7 @@
 
   # Shell aliases
   environment.shellAliases = {
+    cdd = "cd ~/Developer";
     cdnix = "cd ~/Developer/nix/nix-config";
     code-nix = "code ~/Developer/nix/nix-config/";
     code-nixc = "code ~/Developer/nix/nix-config/nixos/configuration.nix";

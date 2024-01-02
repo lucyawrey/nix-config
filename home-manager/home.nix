@@ -64,6 +64,8 @@
     userName  = "Lucy Awrey";
     userEmail = "35198881+lucyawrey@users.noreply.github.com";
     aliases = {
+      ls = "branch -l -r";
+      new = "checkout -b";
       s = "status";
       com = "commit -a -m";
       undo = "reset HEAD~1 --mixed";
