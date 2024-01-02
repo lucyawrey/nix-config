@@ -59,6 +59,7 @@
     wget
     vscode
     steam
+    pgadmin4-desktopmode
   ];
 
   programs.neovim.enable = true;
