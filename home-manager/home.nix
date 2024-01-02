@@ -47,6 +47,7 @@
 
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
+    sl
     nodejs
     firefox
     chromium
@@ -76,9 +77,23 @@
     };
   };
 
+  # Shell aliases
+  programs.bash.shellAliases = {
+    cdnix = "cd ~/Developer/nix/nix-config";
+    code-nix = "code ~/Developer/nix/nix-config/";
+    code-nixc = "code ~/Developer/nix/nix-config/nixos/configuration.nix";
+    code-home = "code /home/lucy/Developer/nix/nix-config/home-manager/home.nix";
+    switch-nix = "sudo nixos-rebuild switch --flake .#nixos";
+    switch-home = "home-manager switch --flake .#lucy@nixos";
+    dc = "docker compose";
+    pnpi = "pnpm install";
+    pnpr = "pnpm run";
+    pnpx = "pnpm exec";
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "23.05";
+  home.stateVersion = "23.11";
 }
