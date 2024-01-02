@@ -51,7 +51,7 @@
     nodejs_20
     nodejs_20.pkgs.pnpm
     firefox
-    chromium
+    google-chrome
     wget
     vscode
     steam
