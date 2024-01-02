@@ -19,7 +19,8 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
-
+    # Import home-manager's NixOS module
+    inputs.home-manager.nixosModules.home-manager
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
@@ -154,6 +155,15 @@
     };
   };
 
+  # Configuration needed to import and build home-manager configurations for
+  # users instead of building them seperately.
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      lucy = import ../home-manager/home.nix;
+    };
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [];
@@ -166,8 +176,7 @@
     code-lantern = "code ~/Developer/node/lantern";
     code-nixc = "code ~/Developer/nix/nix-config/nixos/configuration.nix";
     code-home = "code /home/lucy/Developer/nix/nix-config/home-manager/home.nix";
-    switch-nix = "sudo nixos-rebuild switch --flake .#nixos";
-    switch-home = "home-manager switch --flake .#lucy@nixos";
+    rebuild = "sudo nixos-rebuild switch --flake .#nixos";
     dc = "docker compose";
     pnpi = "pnpm install";
     pnpr = "pnpm run";

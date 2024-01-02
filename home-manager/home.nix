@@ -60,6 +60,7 @@
     vscode
     steam
     pgadmin4-desktopmode
+    godot_4
   ];
 
   programs.neovim.enable = true;
