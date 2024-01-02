@@ -61,6 +61,8 @@
     steam
     pgadmin4-desktopmode
     godot_4
+    signal-desktop
+    signal-cli
   ];
 
   programs.neovim.enable = true;
