@@ -156,12 +156,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    firefox
-    chromium
-    wget
-    vscode
-  ];
+  environment.systemPackages = with pkgs; [];
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
