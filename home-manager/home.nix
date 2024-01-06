@@ -50,8 +50,6 @@
     discord
     blender
     sl
-    nodejs_20
-    nodejs_20.pkgs.pnpm
     gcc
     rustup
     firefox
@@ -59,6 +57,7 @@
     wget
     vscode
     steam
+    steam-run
     pgadmin4-desktopmode
     godot_4
     signal-desktop
