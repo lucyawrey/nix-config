@@ -6,7 +6,7 @@
       tooltipDelay = 100;
       theme = "breeze-dark";
       colorScheme = "BreezeDark";
-      wallpaper = "./lucina-sweater.png";
+      wallpaper = "/home/lucya/Developer/nix/nix-config/lucina-sweater.png";
     };
 
     kwin.titlebarButtons = {
