@@ -15,8 +15,10 @@
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
 
-    # You can also split up your configuration and import pieces of it here:
+    # Import plasma-manager's NixOS module
     inputs.plasma-manager.homeManagerModules.plasma-manager
+
+    # You can also split up your configuration and import pieces of it here:
     ./plasma.nix
   ];
 

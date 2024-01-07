@@ -17,10 +17,11 @@
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
 
-    # You can also split up your configuration and import pieces of it here:
-    ./aliases.nix
     # Import home-manager's NixOS module
     inputs.home-manager.nixosModules.home-manager
+
+    # You can also split up your configuration and import pieces of it here:
+    ./aliases.nix
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];

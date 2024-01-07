@@ -3,15 +3,15 @@
     enable = true;
     workspace = {
       clickItemTo = "select";
-      tooltipDelay = 5;
+      tooltipDelay = 100;
       theme = "breeze-dark";
       colorScheme = "BreezeDark";
-      wallpaper = "${pkgs.libsForQt5.plasma-workspace-wallpapers}/share/wallpapers/Kay/contents/images/3840x2160.png";
+      wallpaper = "./lucina-sweater.png";
     };
 
     kwin.titlebarButtons = {
      left = [ "on-all-desktops" "keep-above-windows" ];
-     right = [ "help" "minimize" "maximize" "close" ]
+     right = [ "help" "minimize" "maximize" "close" ];
    };
     
     spectacle.shortcuts = {
