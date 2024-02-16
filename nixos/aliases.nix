@@ -15,5 +15,6 @@
     pnpi = "pnpm install";
     pnpr = "pnpm run";
     pnpx = "pnpm exec";
+    optimise = "nix-store --optimise";
   };
 }

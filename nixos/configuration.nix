@@ -188,6 +188,9 @@
     };
   };
 
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "03:45" "12:00" "16:45" ];
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
