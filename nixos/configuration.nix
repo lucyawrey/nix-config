@@ -120,6 +120,10 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enables support for Bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+
   # Audio
   # Enable sound with pipewire.
   sound.enable = true;
