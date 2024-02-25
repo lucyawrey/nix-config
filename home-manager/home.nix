@@ -67,6 +67,7 @@
     barrier
   ];
 
+  programs.bash.enable = true;
   programs.neovim.enable = true;
   programs.home-manager.enable = true;
   programs.git = {
@@ -90,6 +91,13 @@
         rebase = false;
       };
     };
+  };
+
+  # nix direnv config for automatcally executing nix-shell
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true; # see note on other shells below
+    nix-direnv.enable = true;
   };
 
   # Nicely reload system units when changing configs
