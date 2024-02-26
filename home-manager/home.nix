@@ -60,11 +60,11 @@
     vscode
     steam
     steam-run
-    pgadmin4-desktopmode
     godot_4
     signal-desktop
     signal-cli
     barrier
+    pgadmin4
   ];
 
   programs.bash.enable = true;
