@@ -65,6 +65,7 @@
     signal-cli
     barrier
     pgadmin4
+    vlc
   ];
 
   programs.bash.enable = true;
