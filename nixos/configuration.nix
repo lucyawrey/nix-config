@@ -142,6 +142,10 @@
     #media-session.enable = true;
   };
 
+  permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
+
   # Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     lucy = {
@@ -154,13 +158,9 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       extraGroups = ["networkmanager" "wheel" "audio" "docker"];
-      packages = with pkgs; [];
+      packages = with pkgs; [obsidian];
     };
   };
-
-  permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
 
   # Configuration needed to import and build home-manager configurations for
   # users instead of building them seperately.
