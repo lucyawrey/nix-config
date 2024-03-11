@@ -47,10 +47,6 @@
     homeDirectory = "/home/lucy";
   };
 
-  permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
-
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
     discord

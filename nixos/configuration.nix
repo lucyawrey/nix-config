@@ -158,6 +158,10 @@
     };
   };
 
+  permittedInsecurePackages = [
+    "electron-25.9.0"
+  ];
+
   # Configuration needed to import and build home-manager configurations for
   # users instead of building them seperately.
   home-manager = {
