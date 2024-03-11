@@ -39,6 +39,7 @@
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
+      permittedInsecurePackages = ["electron-25.9.0"];
     };
   };
 
@@ -47,6 +48,7 @@
     homeDirectory = "/home/lucy";
   };
 
+  home.permi
   # Add stuff for your user as you see fit:
   home.packages = with pkgs; [
     discord
@@ -66,6 +68,7 @@
     barrier
     pgadmin4
     vlc
+    obsidian
   ];
 
   programs.bash.enable = true;

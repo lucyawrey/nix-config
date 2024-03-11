@@ -142,10 +142,6 @@
     #media-session.enable = true;
   };
 
-  permittedInsecurePackages = [
-    "electron-25.9.0"
-  ];
-
   # Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     lucy = {
@@ -158,7 +154,7 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       extraGroups = ["networkmanager" "wheel" "audio" "docker"];
-      packages = with pkgs; [obsidian];
+      packages = with pkgs; [];
     };
   };
 
