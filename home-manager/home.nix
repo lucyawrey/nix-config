@@ -66,6 +66,7 @@
     barrier
     pgadmin4
     vlc
+    obsidian
   ];
 
   programs.bash.enable = true;
